@@ -126,26 +126,26 @@ $addOne(2); // 3
 ```
 
 ```python
-// funkcja otrzymuje jakis numer jako argument (n) i dodaje do niego 1
+# funkcja otrzymuje jakis numer jako argument (n) i dodaje do niego 1
 def add_one(n):
     return n + 1
 
-// wielokrotne wywolanie funkcji z tym samym argumentem (input) produkuje ten sam rezultat (output)
-add_one(2); // 3
-add_one(2); // 3
-add_one(2); // 3
+# wielokrotne wywolanie funkcji z tym samym argumentem (input) produkuje ten sam rezultat (output)
+add_one(2); # 3
+add_one(2); # 3
+add_one(2); # 3
 ```
 
 ```ruby
-// funkcja otrzymuje jakis numer jako argument (n) i dodaje do niego 1
+# funkcja otrzymuje jakis numer jako argument (n) i dodaje do niego 1
 def add_one(n)
   n + 1
 end
 
-// wielokrotne wywolanie funkcji z tym samym argumentem (input) produkuje ten sam rezultat (output)
-add_one(2); // 3
-add_one(2); // 3
-add_one(2); // 3
+# wielokrotne wywolanie funkcji z tym samym argumentem (input) produkuje ten sam rezultat (output)
+add_one(2); # 3
+add_one(2); # 3
+add_one(2); # 3
 
 ```
 
@@ -165,9 +165,9 @@ $addOne(2); // 3
 
 $someNum = $someNum + 1;
 
-$addOne(3); // 4
-$addOne(3); // 4
-$addOne(3); // 4
+$addOne(2); // 4
+$addOne(2); // 4
+$addOne(2); // 4
 ```
 
 Albo gorzej!
@@ -702,6 +702,7 @@ Smialo konsultuj/pytaj ze mna lub/i innymi uczestnikami warsztatu przez Zoom lub
 ## PHP
 * [Functional Programming and PHP](https://www.sitepoint.com/functional-programming-and-php/)
 * [Mozliwa implementacja `tail`, choc na wzor UNIXowy](https://tekkie.dev/php/tail-functionality-in-php)
+* [biblioteka Tarsana Functional](https://github.com/tarsana/functional)
 
 ## Python
 * [Pure functions](https://www.pythoninformer.com/programming-techniques/functional-programming/pure-functions/)
