@@ -397,7 +397,7 @@ print(factorial(6))  # 6*5*4*3*2*1 = 720
 
 Jezyki funkcyjne typowo maja w swoich podstawowych bibliotekach zbior funkcji do pracy na kolekcjach. Jezyki z funkcyjnym paradygmatem czesto nie sa inne.
 
-## head i tail
+### head i tail
 
 Jesli dzialamy na arrays to myslimy w kontekscie indeksow. Ale FP zazwyczaj uzywala polaczonych list (linked lists), gdzie ostatni element trzyma referencje na temat elementu po lewej rece. Ten po lewej trzyma referencje do kolejnego elementu po jego lewej stronie, itd. W funkcyjnych jezykach jest to bardzo latwo zobrazowac. Wezmy np. backendowy Elixir (powiedzmy, dziecko papy Erlanga i mamy Ruby):
 
@@ -435,44 +435,29 @@ tail  # => [2,3]
 W Pythonie kod wyglada dokladnie tak samo jak w Ruby.  
 Niestety, PHP nie ma tak latwego dostepu do tych dwoch funkcji.
 
-## zip
+### zip
 
-```javascript
-// zip
-// laczy ze soba dwie listy w krotki (tuples). JS nie ma krotek, wiec otrzymujemy array of arrays.
-R.zip([1, 2, 3], ['a', 'b', 'c']); //=> [[1, 'a'], [2, 'b'], [3, 'c']]
+`zip` laczy ze soba dwie listy w pary.  
+"Resztki" sa albo odrzucane, albo laczone w pare z nil/null (w zaleznosci od jezyka/implementacji)
 
-
-// take
-// bierze liczbe elementow z listy zaczynajac od lewej
-R.take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
-
-
-// drop
-// przeciwienstwo 'take'. Odrzuca liczbe elementow z listy zaczynajac od lewej
-R.drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
-
-
-// all
-// sprawdza, czy wszystkie elementy listy zgadzaja sie z predykatem
-R.all(R.equals(3))([3, 3, 1, 3]); //=> false
-
-
-// any
-// sprawdza, czy ktorykolwiek z elementow listy zgadza sie z predykatem
-R.any(n => n < 0)([1, 2]); //=> false
-R.any(R.flip(R.lt)(0))([1, 2]); //=> false
-R.any(R.lt(0))([1, 2]); //=> true
-
-
-// includes
-// sprawdza, czy element jest w liscie/string
-R.includes(3, [1, 2, 3]); //=> true
-R.includes(4, [1, 2, 3]); //=> false
-R.includes({ name: 'Fred' }, [{ name: 'Fred' }]); //=> true
-R.includes([42], [[42]]); //=> true
-R.includes('ba', 'banana'); //=>true
+```ruby
+arr1 = [1, 4, 1, 1, 88, 9] 
+arr2 = [18, 22, 50, 6] 
+  
+arr1.zip(arr2) #[[1, 18], [4, 22], [1, 50], [1, 6], [88, nil], [9, nil]]
 ```
+
+### inne
+- take/drop
+- all/any/includes/itp. (wszystkie zwracaja `bool`)
+- find/fetch
+- chunk
+- join
+- reverse
+- min/max
+- sum
+- count
+- unique
 
 
 ## Pipe(line) operator
